@@ -1,0 +1,32 @@
+	<br>
+    <br>
+    <br>
+<div class="container">
+	
+<table class="table table-bordered">
+  <thead>
+    <tr>
+    
+      <th>Nome</th>
+      <th>Discipulador</th>
+      <th>Data nascimento</th>
+      <th>ID</th>
+      <th>Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let membro of membros">
+      
+      <td>{{membro.Nome}}</td>
+      <td>{{membro.Discipulador}}</td>
+      <td>{{membro.DataNascimento}}</td>
+      <td>{{membro._id.$oid}}</td>
+      <td><a [routerLink]="['/membros',membro._id.$oid]"><i class="fa fa-address-card" aria-hidden="true"></i></a></td>
+    </tr>
+    
+   
+  </tbody>
+</table>
+
+</div>
+		
